@@ -7,25 +7,29 @@ import ButtonLink from "../components/ButtonLink";
 
 const ButtonContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 `;
 
-const Home = () => (
+const Step2 = () => (
   <>
     <Head>
-      <title>Step 1</title>
+      <title>Step 2</title>
     </Head>
 
-    <h1>Step 1</h1>
+    <h1>Step 2</h1>
 
     <div>Form Here</div>
 
     <ButtonContainer>
-      <Link href="/step2">
+      <Link href="/">
+        <ButtonLink>Back</ButtonLink>
+      </Link>
+
+      <Link href="/step3">
         <ButtonLink>Next</ButtonLink>
       </Link>
     </ButtonContainer>
   </>
 );
 
-export default Home;
+export default Step2;
