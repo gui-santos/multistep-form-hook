@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const ButtonLink = styled.a`
   background-color: #9100ff;
@@ -10,6 +10,6 @@ const ButtonLink = styled.a`
   :hover {
     background-color: #aa3dfc;
   }
-`;
+`
 
-export default ButtonLink;
+export default ButtonLink

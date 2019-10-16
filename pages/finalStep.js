@@ -6,28 +6,26 @@ import Form from '../components/Form'
 import ButtonLink from '../components/ButtonLink'
 import Button, { ButtonContainer } from '../components/Button'
 
-function Step2() {
+function FinalStep() {
   return (
     <>
       <Head>
-        <title>Step 2</title>
+        <title>Final Step</title>
       </Head>
 
-      <h1>Step 2</h1>
+      <h1>FINAL Step</h1>
 
       <Form>Form Here</Form>
 
       <ButtonContainer>
-        <Link href="/">
+        <Link href="/step2">
           <ButtonLink>Back</ButtonLink>
         </Link>
 
-        <Link href="/finalStep">
-          <ButtonLink>Next</ButtonLink>
-        </Link>
+        <Button type="submit">Submit</Button>
       </ButtonContainer>
     </>
   )
 }
 
-export default Step2
+export default FinalStep

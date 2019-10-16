@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import App from "next/app";
+import React from 'react'
+import styled from 'styled-components'
+import App from 'next/app'
 
 const Layout = styled.div`
   padding: 1rem;
-`;
+`
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -20,13 +20,13 @@ class MyApp extends App {
   // }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
     return (
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    );
+    )
   }
 }
 
-export default MyApp;
+export default MyApp
