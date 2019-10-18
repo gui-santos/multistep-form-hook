@@ -25,8 +25,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
-    transition: background-color 250ms ease-in-out,
-                transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
   }
@@ -36,14 +34,17 @@ const GlobalStyle = createGlobalStyle`
     background-color: #aa3dfc;
   }
 
-  button:focus {
-    outline: 1px solid #fff;
+  button:focus,
+  input:focus {
+    outline: 2px solid #dbadfe;
     outline-offset: -4px;
   }
 
-  /* button:active {
-      transform: scale(0.99);
-  } */
+  input {
+    font-size: 1rem;
+    padding: .5rem;
+    border: 2px solid #9100ff;
+  }
 `
 
 export default GlobalStyle

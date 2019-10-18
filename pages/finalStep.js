@@ -1,22 +1,15 @@
 import React from 'react'
-import Head from 'next/head'
 import Link from 'next/link'
 
-import Form from '../components/Form'
+import { FormContainer } from '../components/FormStyles'
 import ButtonLink from '../components/ButtonLink'
 import Button, { ButtonContainer } from '../components/Button'
 
 function FinalStep() {
   return (
-    <>
-      <Head>
-        <title>Final Step</title>
-      </Head>
-
+    <FormContainer>
       <h1>FINAL Step</h1>
-
-      <Form>Form Here</Form>
-
+      Form Here
       <ButtonContainer>
         <Link href="/step2">
           <ButtonLink>Back</ButtonLink>
@@ -24,7 +17,7 @@ function FinalStep() {
 
         <Button type="submit">Submit</Button>
       </ButtonContainer>
-    </>
+    </FormContainer>
   )
 }
 

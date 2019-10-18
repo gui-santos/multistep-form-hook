@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import App from 'next/app'
 
+import Meta from '../components/Meta'
+
 const Layout = styled.div`
   padding: 1rem;
 `
@@ -22,9 +24,12 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <>
+        <Meta />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </>
     )
   }
 }
