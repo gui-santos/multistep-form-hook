@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import App from 'next/app'
 
+import { StoreProvider } from '../store'
 import Meta from '../components/Meta'
 
 const Layout = styled.div`
@@ -26,9 +27,11 @@ class MyApp extends App {
     return (
       <>
         <Meta />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <StoreProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </StoreProvider>
       </>
     )
   }

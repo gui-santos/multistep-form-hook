@@ -1,15 +1,23 @@
 import React from 'react'
 import Link from 'next/link'
 
+import { Store } from '../store'
 import { FormContainer } from '../components/FormStyles'
 import ButtonLink from '../components/ButtonLink'
 import Button, { ButtonContainer } from '../components/Button'
 
 function FinalStep() {
+  const { state } = React.useContext(Store)
+
   return (
     <FormContainer>
       <h1>FINAL Step</h1>
-      Form Here
+
+      <div>
+        name: {state.step1.firstName} {state.step1.lastName}
+      </div>
+      <div>email: {state.step2.email}</div>
+
       <ButtonContainer>
         <Link href="/step2">
           <ButtonLink>Back</ButtonLink>

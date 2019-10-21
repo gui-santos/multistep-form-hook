@@ -18,21 +18,21 @@ export const Label = styled.label`
   color: #9100ff;
 `
 
-export const Input = styled.input`
+export const InputStyles = styled.input`
   display: block;
   width: 100%;
   margin-top: 0.25rem;
 `
 
-export const LabelledInput = props => {
+export const Input = props => {
   return (
     <Label htmlFor={props.id}>
       {props.label}
-      <Input
+      <InputStyles
         id={props.id}
         name={props.name}
         type="text"
-        defaultValue={props.defaultValue}
+        defaultValue={props.value}
         ref={props.refFunction}
       />
     </Label>
