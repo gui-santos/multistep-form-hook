@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import useForm from 'react-hook-form'
 import Router from 'next/router'
 
 import { Store } from '../store'
-import { FormContainer, Input, ErrorMsg } from '../components/FormStyles'
+import FormContainer from '../components/form/FormContainer'
+import TextInput from '../components/form/TextInput'
 import Button, { ButtonContainer } from '../components/Button'
 
 function Home() {
-  const { state, dispatch } = React.useContext(Store)
+  const { state, dispatch } = useContext(Store)
   const { register, handleSubmit, errors } = useForm()
 
   const onSubmit = data => {
@@ -19,25 +20,31 @@ function Home() {
     <FormContainer>
       <h1>Step 1</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          id="firstName"
+        <TextInput
           name="firstName"
           label="First Name"
           value={state.step1.firstName}
-          refFunction={register({ required: true })}
+          refFunction={register({
+            required: { value: true, message: 'You need to tell us your name' },
+          })}
+          error={errors.firstName}
         />
-        {errors.firstName && <ErrorMsg>This field is required</ErrorMsg>}
 
-        <Input
+        <TextInput
           id="lastName"
           name="lastName"
           label="Last Name"
           value={state.step1.lastName}
-          refFunction={register({ required: true })}
+          refFunction={register({
+            required: {
+              value: true,
+              message: 'You need to tell us your family name',
+            },
+          })}
+          error={errors.lastName}
         />
-        {errors.lastName && <ErrorMsg>This field is required</ErrorMsg>}
 
-        <ButtonContainer align="flex-end">
+        <ButtonContainer oneButton>
           <Button type="submit">Next</Button>
         </ButtonContainer>
       </form>

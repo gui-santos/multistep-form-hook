@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/link'
 
 import { Store } from '../store'
-import { FormContainer } from '../components/FormStyles'
+import FormContainer from '../components/form/FormContainer'
 import ButtonLink from '../components/ButtonLink'
 import Button, { ButtonContainer } from '../components/Button'
 
 function FinalStep() {
-  const { state } = React.useContext(Store)
+  const { state } = useContext(Store)
 
   return (
     <FormContainer>

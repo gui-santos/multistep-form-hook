@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 export const ButtonContainer = styled.div`
   display: flex;
-  justify-content: ${({ align }) => (align ? align : 'space-between')};
+  justify-content: ${({ oneButton }) =>
+    oneButton ? 'flex-end' : 'space-between'};
   margin-top: 2rem;
 `
 
